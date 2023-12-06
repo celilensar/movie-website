@@ -1,0 +1,283 @@
+* {
+    margin: 0rem;
+    color: aliceblue;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    font-family: 'Sen', sans-serif;
+    color: rgb(26, 255, 0);
+    
+    }
+
+
+.menu-container {
+    flex: 6; 
+
+}
+.menu-list {
+    display: flex;
+    list-style: none;
+    font-family: 'Sen', sans-serif;
+    font-weight: bold;
+
+}
+.menu-list-item {
+    margin: 1rem;
+    padding: 0 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.menu-list-item:hover {
+    background-color: #08dc3da7;
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.2);
+}
+.menu-list-item.active {
+    font-weight: bolder;    
+}
+
+.profile-container {
+    display: flex;
+    flex: 2;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.profile-picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.profile-text-container {
+    margin: 0 0.8rem;
+}
+
+.profile-text {
+    font-family: 'Sen', sans-serif;
+
+}
+
+.toggle {
+    width: 2.5rem;
+    height: 1.2rem;
+    background-color: azure;
+    border-radius: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-icon {
+    color: goldenrod;
+    margin-left: 0.2rem;
+}
+
+.toggle-ball {
+    width: 1.115rem;
+    height: 1.115rem;
+    background-color: rgb(18, 18, 21);
+    border-radius: 50%;
+    position: absolute;
+    margin-right: 0.1rem;
+    cursor: pointer;
+     
+}
+
+.sidebar {
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    padding-top: 5rem;
+}
+.left-side-icon {
+    color: azure;
+    margin: 2rem auto;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    
+    border-radius: 0.2rem;
+    
+
+}
+
+.left-side-icon:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    
+}
+
+.content-container {
+    margin-left: 50px;
+}
+
+.featured-content {
+    height: 50vh;
+    padding: 3rem;
+
+}
+
+.featured-title {
+    width: 200px;
+}
+.featured-desc {
+    width: 500px;
+    color: rgb(122, 128, 133);
+    margin: 2rem 0;
+}
+
+.featured-button {
+    width: 4.7rem;
+    padding: 0.4rem;
+    background-color: #221709b1;
+    font-family: 'Sen', sans-serif;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+/* .movie-list-container {
+    padding: 0 1rem;
+} */
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 2rem;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+    
+}
+.movie-list-item:hover .movie-list-item-title,.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+    
+}
+
+.movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.movie-list {
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin: auto 1rem;
+    position: relative;
+}
+
+.movie-list-item-title {
+    background-color: #0504046e;
+    padding: 0 0.8rem;
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 1.7rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.movie-list-item-desc {
+    background-color: #0504046e;
+    
+    padding: 0.1rem 0.8rem;
+    width: 80%;
+    height: 30%;
+    border-radius: 0.3rem;
+    font-family: 'Sen', sans-serif;
+    /* font-size: 2rem; */
+    position: absolute;
+    top: 43%;
+    left: 5%;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    
+    
+}
+
+.movie-list-item-button {
+    background-color: #03d303;
+    padding: 0.3rem 1rem;
+    border-radius: 0.7rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Sen', sans-serif;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+
+}
+
+.arrow {
+    font-size: 65px;
+    position: absolute;
+    right: 0px;
+    top: 120px;
+    color: #ffffff94;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
